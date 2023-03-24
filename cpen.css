@@ -1,0 +1,35 @@
+.editor{
+    background: grey;
+    height:100%;
+    
+
+}
+.extra{
+  height: 50vh;
+  width:auto;
+  display: flex;
+}
+#html-code{
+height:50vh;
+width:40%;
+
+}
+#output{
+  height:50vh;
+width:40%; 
+
+}
+
+#css-code{
+  
+  height: 50vh;
+  width:40%;
+  display:flex;
+  }
+  #js-code{
+    height:50vh;
+    width:40%;
+    display:flex;
+    }
+
+    

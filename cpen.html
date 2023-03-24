@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cpen.css">
+</head>
+<body>
+    <div class="editor">
+       
+         <h2>HTML</h2>
+         <div class="extra">
+        <textarea id="html-code"></textarea>
+        <h2>OUTPUT</h2>
+        <iframe id="output"></iframe>
+        </div>
+        <h2>CSS</h1>
+        <textarea id="css-code"></textarea>
+        <h2>JAVASCRIPT</h2>
+        <textarea id="js-code"></textarea><br>
+       
+    </div>
+    
+        <script type="text/javascript">
+         function run() {
+            let htmlCode = document.querySelector(".editor #html-code").value;
+            let cssCode = "<style>"+ document.querySelector(".editor #css-code").value + "</style>";
+            let jsCode = document.querySelector(".editor #js-code").value ;
+            let output = document.querySelector(".editor #output");
+            // console.log(htmlCode,cssCode,jsCode,output);
+            output.contentDocument.body.innerHTML = htmlCode+cssCode;
+            output.contentWindow.eval(jsCode);
+
+         }
+         document.querySelector(".editor #html-code").addEventListener("keyup",run);
+         document.querySelector(".editor #css-code").addEventListener("keyup",run);
+         document.querySelector(".editor #js-code").addEventListener("keyup",run);
+    
+        </script>
+   
+</body>
+
+</html>
+
+<!-- document.querySelector("button").addEventListener("click",function (){
+    alert("button clicked");}) -->
